@@ -70,8 +70,7 @@ function makeMove(tiles,tile) {
 	var adjTopUp = topVal -100;
 	var adjTopDown =parseInt(topVal) +100;
 
-	var validclick =false;
-	alert(  left);
+	var validclick =false
 	while(!validclick) {
 
 		if (adjLeftLeft >=0) {
@@ -80,13 +79,11 @@ function makeMove(tiles,tile) {
 			var thispos =[leftVal+topVal];
 
 			if (tiles[0] === testpos[0]) {
-				alert('true1');
 				tiles.splice(0,1,thispos[0]);
 				tile.setAttribute('style','left:'+adjLeftLeft+'px; top:'+top+'; '+pos.substring(pos.indexOf('background')));
 			
 				validclick =true;
 				
-				alert(validclick);
 				break;
 			}
 		}
@@ -97,13 +94,11 @@ function makeMove(tiles,tile) {
 			var thispos =[leftVal+topVal];
 
 			if (tiles[0] === testpos[0]){
-				alert('true2');
 				tiles.splice(0,1,thispos[0]);
 				tile.setAttribute('style','left:'+adjLeftRight+'px; top:'+top+'; '+pos.substring(pos.indexOf('background')));
 				
 				validclick =true;
 				
-				alert(validclick);
 				break;
 			}
 		}
@@ -114,13 +109,11 @@ function makeMove(tiles,tile) {
 			var thispos =[leftVal+topVal];
 			
 			if (tiles[0] === testpos[0]) {
-				alert('true3');
-				tiles.splice(0,1,thispos.reverse().join());
+				tiles.splice(0,1,thispos[0]);
 				tile.setAttribute('style','left:'+left+'; top:'+adjTopUp+'px; '+pos.substring(pos.indexOf('background')));
 				
 				validclick =true;
 				
-				alert(validclick);
 				break;
 			}
 		}	
@@ -131,13 +124,11 @@ function makeMove(tiles,tile) {
 			var thispos =[leftVal+topVal];
 			
 			if (tiles[0] === testpos[0]) {
-				alert('true4');
 				tiles.splice(0,1,thispos[0]);
 				tile.setAttribute('style','left:'+left+'; top:'+adjTopDown+'px; '+pos.substring(pos.indexOf('background')));
 				
 				validclick =true;
 				
-				alert(validclick);
 				break;
 			}
 		}
